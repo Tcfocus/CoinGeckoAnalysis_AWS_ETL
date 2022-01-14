@@ -24,8 +24,8 @@ The AWS (S3 and Redshift) cloud-based architecture was utilized due to its abili
 
 The primary steps of the ETL pipeline are:  
 	1. JSON data is retrived via API calls -- Coingecko API is called to access unique data about multiple tokens, as well as historical price and volume data. The two calls create two unique tables of data: CoinList (single record per coin with various fields), and CoinPrice (numerous rows of historical price/volume data for each coin)  
-	2. The JSON data is cleaned up and converted into a CSV -- JSON-formatted information is provided by the API calls, which are then converted into dataframes to be cleaned and transformed. 
-	3. The CSV's is uploaded to S3 for storage -- Two sets of CSV data are loaded in AWS S3 buckets 
+	2. The JSON data is cleaned up and converted into a CSV -- JSON-formatted information is provided by the API calls, which are then converted into dataframes to be cleaned and transformed.  
+	3. The CSV's is uploaded to S3 for storage -- Two sets of CSV data are loaded in AWS S3 buckets.  
 	4. Redshift tables are deleted and new ones are created to fit the data schema --The existing tables are dropped, and new tables are created on each run of the script.  
 	5. The S3 data is loaded into Redshift -- The CSV's residing in S3 are loaded into their respective Redshift tables.  
 	6. Create visuals and perform analysis via Tableau -- Analyze the top-performing assets, identify and trends, and continue to explore the data.  
