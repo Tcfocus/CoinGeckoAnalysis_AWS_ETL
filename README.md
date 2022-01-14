@@ -7,7 +7,7 @@
 The purpose of this project is to create an ETL pipeline for visualizing and analyzing large sets of data. The data of interest is cryptocurrency data, which is retrieved from the CoinGecko API in JSON format. The data is then transformed and loaded into S3, and finally loaded into a Redshift Data Warehouse to allow for different queries and analyses to be performed.
 
 ## Initial Visualization
-Tableau was used as the tool for visualizing the data and performing further exploration.
+Tableau was used as the tool for visualizing the data and performing further exploration upon completition of the scripts.
 
 ![image](https://user-images.githubusercontent.com/46071768/149466021-4822f22d-7a92-43bf-912f-474e3dc663a5.png)
 ![image](https://user-images.githubusercontent.com/46071768/149466031-b1ff63a3-7f4e-4511-8499-949311d44d0e.png)
